@@ -1,0 +1,11 @@
+# Enable auto update
+auto-update: true
+
+# The plugin language. This will be applied to the whole server when SlimefunTranslation is not installed.
+lang: en
+
+# Settings for items
+
+glass-electricity-transmitter:
+  # The amount of Glass Electricity Transmitter each craft gives
+  craft-amount: 12
