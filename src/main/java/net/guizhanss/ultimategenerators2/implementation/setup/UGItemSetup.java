@@ -13,11 +13,11 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.electric.generato
 import net.guizhanss.ultimategenerators2.UltimateGenerators2;
 import net.guizhanss.ultimategenerators2.implementation.UGItems;
 import net.guizhanss.ultimategenerators2.implementation.items.capacitors.UGCapacitor;
-import net.guizhanss.ultimategenerators2.implementation.items.generators.BioFuelGenerator;
-import net.guizhanss.ultimategenerators2.implementation.items.generators.DieselGenerator;
-import net.guizhanss.ultimategenerators2.implementation.items.generators.DragonBreathGenerator;
-import net.guizhanss.ultimategenerators2.implementation.items.generators.EndlessGenerator;
-import net.guizhanss.ultimategenerators2.implementation.items.generators.ReactionGenerator;
+import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.BioFuelGenerator;
+import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.DieselGenerator;
+import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.DragonBreathGenerator;
+import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.EndlessGenerator;
+import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.ReactionGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.BioFuelRefinery;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.BiomassExtractionMachine;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.DieselRefinery;

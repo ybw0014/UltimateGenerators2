@@ -21,7 +21,7 @@ import org.bukkit.inventory.ItemStack;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-public class ClassifiedItemListener implements Listener {
+public final class ClassifiedItemListener implements Listener {
     public ClassifiedItemListener(@Nonnull UltimateGenerators2 plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }

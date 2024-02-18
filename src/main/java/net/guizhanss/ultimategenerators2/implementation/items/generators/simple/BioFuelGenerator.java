@@ -1,4 +1,4 @@
-package net.guizhanss.ultimategenerators2.implementation.items.generators;
+package net.guizhanss.ultimategenerators2.implementation.items.generators.simple;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
