@@ -2,56 +2,51 @@ console:
   loaded-language: "Loaded language: {0}"
 
 items:
-  # category item
+  # category items
   _UG2_MAIN:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2" # The addon name, change it to its translated name or keep it as it is
-  # category item
   _UG2_MISC:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2 &7- &7Miscellaneous"
-  # category item
   _UG2_MACHINES:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2 &7- &9Machines"
-  # category item
   _UG2_ENERGY_STORAGE:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2 &7- &eEnergy Storage"
-  # category item
   _UG2_SIMPLE_GENERATORS:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2 &7- &bSimple Generators"
 
-  # recipe type display item
+  # recipe type display items
   _UG2_CANNOT_CRAFT:
     name: "&cCannot Craft"
     lore:
       - "&cThis item cannot be crafted."
-  # recipe type display item
   _UG2_DIESEL_REFINERY:
     name: "&cDiesel Refinery"
     lore:
-      - "&rRefines oil into diesel."
-  # recipe type display item
+      - "&fRefines oil into diesel."
   _UG2_BIOMASS_EXTRACTION_MACHINE:
     name: "&aBiomass Extraction Machine"
     lore:
-      - "&rExtracts biomass from items."
+      - "&fExtracts biomass from items."
   _UG2_BIOFUEL_REFINERY:
     name: "&cBiofuel Refinery"
     lore:
-      - "&rRefines biomass into biofuel."
+      - "&fRefines biomass into biofuel."
   _UG2_HEAVY_WATER_REFINING_MACHINE:
     name: "&7Heavy Water Refining Machine"
     lore:
-      - "&rRefines water into heavy water."
+      - "&fRefines water into heavy water."
 
+  # items
   ENDLESS_GENERATOR:
     name: "&6Endless Generator"
     lore:
@@ -61,17 +56,6 @@ items:
       - "&8\u21E8 &e⚡ &7256 J/signal strength"
     lore-overrides:
       4: "%sftrlore_Power_256_/signal strength%" # only translate the "signal strength" part
-  NETHER_STAR_GENERATOR:
-    name: "&dNether Star Generator"
-    lore:
-      - ""
-      - "&4Ultimate Generator"
-      - "&8\u21E8 &e⚡ &71024 J Buffer"
-      - "&8\u21E8 &e⚡ &764 J/t"
-    lore-overrides:
-      2: "%sftrlore_Machine_EndGame_Generator%" # Do not translate this at all
-      3: "%sftrlore_PowerBuffer_1024%" # Do not translate this at all
-      4: "%sftrlore_PowerPerTick_64%" # Do not translate this at all
   DIESEL_REFINERY:
     name: "&cDiesel Refinery"
     lore:

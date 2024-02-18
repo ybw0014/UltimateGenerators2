@@ -15,7 +15,6 @@ import net.guizhanss.ultimategenerators2.implementation.items.generators.BioFuel
 import net.guizhanss.ultimategenerators2.implementation.items.generators.DieselGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.generators.DragonBreathGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.generators.EndlessGenerator;
-import net.guizhanss.ultimategenerators2.implementation.items.generators.NetherStarGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.generators.ReactionGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.BioFuelRefinery;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.BiomassExtractionMachine;
@@ -342,19 +341,6 @@ public final class UGItemSetup {
             UGRecipeTypes.CANNOT_CRAFT,
             new ItemStack[9]
         ).register(plugin);
-
-        new NetherStarGenerator(
-            UGItemGroups.SIMPLE_GENERATORS,
-            UGItems.NETHER_STAR_GENERATOR,
-            RecipeType.ENHANCED_CRAFTING_TABLE,
-            new ItemStack[] {
-                SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_PLATE, SlimefunItems.REINFORCED_ALLOY_INGOT,
-                SlimefunItems.PLASTIC_SHEET, SlimefunItems.WITHER_PROOF_GLASS, SlimefunItems.PLASTIC_SHEET,
-                SlimefunItems.WITHER_PROOF_GLASS, SlimefunItems.BIG_CAPACITOR, SlimefunItems.WITHER_PROOF_GLASS
-            }
-        ).setCapacity(1024)
-            .setEnergyProduction(64)
-            .register(plugin);
 
         new DieselGenerator(
             UGItemGroups.SIMPLE_GENERATORS,
