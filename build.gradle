@@ -29,7 +29,7 @@ repositories {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT'
     compileOnly 'com.github.Slimefun:Slimefun4:da9c2ac4cc'
-    implementation 'net.guizhanss:GuizhanLib-api:1.7.4'
+    implementation 'net.guizhanss:GuizhanLib-api:1.7.5'
     implementation 'org.bstats:bstats-bukkit:3.0.2'
     implementation 'net.guizhanss:SlimefunTranslation:59724ec5a1'
 }

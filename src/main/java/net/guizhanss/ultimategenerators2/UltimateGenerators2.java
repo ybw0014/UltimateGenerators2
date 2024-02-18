@@ -8,6 +8,8 @@ import javax.annotation.Nonnull;
 
 import com.google.common.base.Preconditions;
 
+import net.guizhanss.ultimategenerators2.core.services.ListenerService;
+
 import org.bukkit.plugin.Plugin;
 
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
@@ -88,6 +90,9 @@ public final class UltimateGenerators2 extends AbstractAddon {
 
         // integrations
         integrationService = new IntegrationService(this);
+
+        // listeners
+        new ListenerService(this);
 
         // metrics
         setupMetrics();

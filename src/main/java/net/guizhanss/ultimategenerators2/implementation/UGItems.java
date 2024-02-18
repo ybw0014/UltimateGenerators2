@@ -24,11 +24,6 @@ public final class UGItems {
         Heads.ENDLESS_GENERATOR.getTexture()
     );
 
-    public static final SlimefunItemStack NETHER_STAR_GENERATOR = UltimateGenerators2.getLocalization().getItem(
-        "NETHER_STAR_GENERATOR",
-        Material.GRAY_STAINED_GLASS
-    );
-
     public static final SlimefunItemStack DIESEL_REFINERY = UltimateGenerators2.getLocalization().getItem(
         "DIESEL_REFINERY",
         Material.PISTON

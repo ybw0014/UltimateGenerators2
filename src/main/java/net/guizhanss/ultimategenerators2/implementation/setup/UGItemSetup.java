@@ -1,5 +1,7 @@
 package net.guizhanss.ultimategenerators2.implementation.setup;
 
+import net.guizhanss.ultimategenerators2.implementation.items.capacitors.HiddenCapacitor;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -317,7 +319,7 @@ public final class UGItemSetup {
             2621440
         ).register(plugin);
 
-        new UGCapacitor(
+        new HiddenCapacitor(
             UGItemGroups.ELECTRICITY_STORAGE,
             UGItems.KAPA_ELECTRICITY_STORAGE,
             UGRecipeTypes.CANNOT_CRAFT,
@@ -325,7 +327,7 @@ public final class UGItemSetup {
             20971520
         ).register(plugin);
 
-        new UGCapacitor(
+        new HiddenCapacitor(
             UGItemGroups.ELECTRICITY_STORAGE,
             UGItems.PHI_ELECTRICITY_STORAGE,
             UGRecipeTypes.CANNOT_CRAFT,

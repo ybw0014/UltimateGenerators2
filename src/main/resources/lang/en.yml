@@ -15,10 +15,10 @@ items:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2 &7- &9Machines"
-  _UG2_ENERGY_STORAGE:
+  _UG2_ELECTRICITY_STORAGE:
     conditions:
       force-load: true
-    name: "&dUltimateGenerators2 &7- &eEnergy Storage"
+    name: "&dUltimateGenerators2 &7- &eElectricity Storage"
   _UG2_SIMPLE_GENERATORS:
     conditions:
       force-load: true
