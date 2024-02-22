@@ -15,6 +15,7 @@ public final class ConfigurationService {
     private boolean debug;
     private String lang;
     private int glassElectricityTransmitterCraftAmount;
+    private int enderCrystalGeneratorEnergyPerCrystal;
 
     public ConfigurationService(UltimateGenerators2 plugin) {
         config = new AddonConfig(plugin, "config.yml");
@@ -29,6 +30,7 @@ public final class ConfigurationService {
         debug = config.getBoolean("debug", false);
         lang = config.getString("lang", "en");
         glassElectricityTransmitterCraftAmount = config.getInt("glass-electricity-transmitter.craft-amount", 12);
+        enderCrystalGeneratorEnergyPerCrystal = config.getInt("ender-crystal-generator.energy-per-crystal", 128);
 
         config.save();
     }

@@ -23,25 +23,39 @@ items:
     conditions:
       force-load: true
     name: "&dUltimateGenerators2 &7- &bSimple Generators"
+  _UG2_MODULAR_GENERATORS:
+    conditions:
+      force-load: true
+    name: "&dUltimateGenerators2 &7- &cModular Generators"
 
   # recipe type display items
   _UG2_CANNOT_CRAFT:
+    conditions:
+      force-load: true
     name: "&cCannot Craft"
     lore:
       - "&cThis item cannot be crafted."
   _UG2_DIESEL_REFINERY:
+    conditions:
+      force-load: true
     name: "&cDiesel Refinery"
     lore:
       - "&fRefines oil into diesel."
   _UG2_BIOMASS_EXTRACTION_MACHINE:
+    conditions:
+      force-load: true
     name: "&aBiomass Extraction Machine"
     lore:
       - "&fExtracts biomass from items."
   _UG2_BIOFUEL_REFINERY:
+    conditions:
+      force-load: true
     name: "&cBiofuel Refinery"
     lore:
       - "&fRefines biomass into biofuel."
   _UG2_HEAVY_WATER_REFINING_MACHINE:
+    conditions:
+      force-load: true
     name: "&7Heavy Water Refining Machine"
     lore:
       - "&fRefines water into heavy water."
@@ -150,12 +164,8 @@ items:
       - "&rto generate electricity."
       - ""
       - "&4Ultimate Generator"
-      - "&8\u21E8 &e⚡ &714336 J Buffer"
-      - "&8\u21E8 &e⚡ &70 ~ +∞ J/s"
     lore-overrides:
       5: "%sftrlore_Machine_EndGame_Generator%" # Do not translate this at all
-      6: "%sftrlore_PowerBuffer_14336%" # Do not translate this at all
-      7: "%sftrlore_PowerPerSecond_0~+∞%" # Do not translate this at all
   ENDER_CRYSTAL_GENERATOR_BASE:
     name: "&bEnd Crystal Generator Base"
   ENDER_CRYSTAL_GENERATOR_STABILIZER:
@@ -163,10 +173,10 @@ items:
     lore:
       - ""
       - "&6Advanced Machine"
-      - "&8\u21E8 &e⚡ &718 J/s"
+      - "&8\u21E8 &e⚡ &79 J/t"
     lore-overrides:
-      1: "%sftrlore_Machine_Advanced_Machine%"
-      2: "%sftrlore_PowerPerSecond_18%"
+      2: "%sftrlore_Machine_Advanced_Machine%"
+      3: "%sftrlore_PowerPerTick_9%"
   ENDER_CRYSTAL_ENHANCER:
     name: "&9End Crystal Enhancer"
   MODULAR_GENERATOR_REGULATOR:

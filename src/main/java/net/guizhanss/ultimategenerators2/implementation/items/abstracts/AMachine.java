@@ -12,7 +12,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import com.google.common.base.Preconditions;
 
-import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
@@ -34,9 +33,10 @@ import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 
-import net.guizhanss.ultimategenerators2.api.recipes.MachineRecipe;
-import net.guizhanss.ultimategenerators2.api.recipes.SingleMachineRecipe;
-import net.guizhanss.ultimategenerators2.api.recipes.SingleOutputMachineRecipe;
+import net.guizhanss.ultimategenerators2.core.recipes.MachineRecipe;
+import net.guizhanss.ultimategenerators2.core.recipes.SingleMachineRecipe;
+import net.guizhanss.ultimategenerators2.core.recipes.SingleOutputMachineRecipe;
+import net.guizhanss.ultimategenerators2.utils.EnergyNetUtils;
 
 import lombok.Getter;
 
@@ -44,7 +44,6 @@ public abstract class AMachine extends AHopper implements EnergyNetComponent, Ma
     protected final List<MachineRecipe> recipes = new ArrayList<>();
     private final MachineProcessor<CraftingOperation> processor = new MachineProcessor<>(this);
 
-    @Getter
     private int energyCapacity = -1;
     @Getter
     private int energyConsumption = -1;
@@ -146,7 +145,7 @@ public abstract class AMachine extends AHopper implements EnergyNetComponent, Ma
         CraftingOperation currentOperation = processor.getOperation(b);
 
         if (currentOperation != null) {
-            if (takeCharge(b.getLocation())) {
+            if (EnergyNetUtils.takeCharge(this, b.getLocation(), getEnergyConsumption())) {
                 if (!currentOperation.isFinished()) {
                     processor.updateProgressBar(inv, STATUS_SLOT, currentOperation);
                     currentOperation.addProgress(1);
@@ -167,21 +166,6 @@ public abstract class AMachine extends AHopper implements EnergyNetComponent, Ma
                 processor.startOperation(b, new CraftingOperation(next.toSf()));
             }
         }
-    }
-
-    protected boolean takeCharge(@Nonnull Location l) {
-        Preconditions.checkNotNull(l, "Location cannot be null");
-
-        if (isChargeable()) {
-            int charge = getCharge(l);
-
-            if (charge < getEnergyConsumption()) {
-                return false;
-            }
-
-            setCharge(l, charge - getEnergyConsumption());
-        }
-        return true;
     }
 
     @Nullable

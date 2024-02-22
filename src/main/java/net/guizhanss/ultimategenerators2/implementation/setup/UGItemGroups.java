@@ -61,4 +61,14 @@ public final class UGItemGroups {
         ),
         4
     );
+
+    public static final SubItemGroup MODULAR_GENERATORS = new SubItemGroup(
+        Keys.ITEMGROUP_MODULAR_GENERATORS,
+        MAIN,
+        UltimateGenerators2.getLocalization().getItem(
+            "_UG2_MODULAR_GENERATORS",
+            Material.BLACK_SHULKER_BOX
+        ),
+        4
+    );
 }

@@ -8,8 +8,6 @@ import javax.annotation.Nonnull;
 
 import com.google.common.base.Preconditions;
 
-import net.guizhanss.ultimategenerators2.core.services.ListenerService;
-
 import org.bukkit.plugin.Plugin;
 
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
@@ -18,6 +16,7 @@ import net.guizhanss.guizhanlib.slimefun.addon.AbstractAddon;
 import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import net.guizhanss.ultimategenerators2.core.services.ConfigurationService;
 import net.guizhanss.ultimategenerators2.core.services.IntegrationService;
+import net.guizhanss.ultimategenerators2.core.services.ListenerService;
 import net.guizhanss.ultimategenerators2.core.services.LocalizationService;
 import net.guizhanss.ultimategenerators2.implementation.setup.UGItemSetup;
 

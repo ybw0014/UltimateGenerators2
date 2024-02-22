@@ -1,12 +1,7 @@
 package net.guizhanss.ultimategenerators2.implementation.listeners;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.FireworkUtils;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-
-import net.guizhanss.ultimategenerators2.UltimateGenerators2;
-
-import net.guizhanss.ultimategenerators2.implementation.UGItems;
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Color;
 import org.bukkit.Location;
@@ -18,8 +13,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
+import io.github.thebusybiscuit.slimefun4.utils.FireworkUtils;
+import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
+
+import net.guizhanss.ultimategenerators2.UltimateGenerators2;
+import net.guizhanss.ultimategenerators2.implementation.UGItems;
+import net.guizhanss.ultimategenerators2.utils.LocationUtils;
 
 public final class ClassifiedItemListener implements Listener {
     public ClassifiedItemListener(@Nonnull UltimateGenerators2 plugin) {
@@ -32,10 +31,10 @@ public final class ClassifiedItemListener implements Listener {
             ItemStack item = itemEntity.getItemStack();
             if (item.getAmount() == 8 && SlimefunUtils.isItemSimilar(item, UGItems.LAMBDA_ELECTRICITY_STORAGE, false)) {
                 e.setCancelled(true);
-                Location l = getBlockCenter(itemEntity.getLocation());
+                Location l = LocationUtils.getBlockCenter(itemEntity.getLocation());
                 itemEntity.remove();
 
-                generateItem(l, UGItems.KAPA_ELECTRICITY_STORAGE, new Color[] { Color.BLACK, Color.BLACK, Color.GRAY, Color.SILVER });
+                generateItem(l, UGItems.KAPA_ELECTRICITY_STORAGE, new Color[] {Color.BLACK, Color.BLACK, Color.GRAY, Color.SILVER});
             }
         }
     }
@@ -46,10 +45,10 @@ public final class ClassifiedItemListener implements Listener {
             ItemStack item = itemEntity.getItemStack();
             if (item.getAmount() == 8 && SlimefunUtils.isItemSimilar(item, UGItems.KAPA_ELECTRICITY_STORAGE, false)) {
                 e.setCancelled(true);
-                Location l = getBlockCenter(itemEntity.getLocation());
+                Location l = LocationUtils.getBlockCenter(itemEntity.getLocation());
                 itemEntity.remove();
 
-                generateItem(l, UGItems.PHI_ELECTRICITY_STORAGE, new Color[] { Color.WHITE, Color.WHITE, Color.GRAY, Color.SILVER });
+                generateItem(l, UGItems.PHI_ELECTRICITY_STORAGE, new Color[] {Color.WHITE, Color.WHITE, Color.GRAY, Color.SILVER});
             }
         }
     }
@@ -66,10 +65,5 @@ public final class ClassifiedItemListener implements Listener {
         newItem.setInvulnerable(true);
         newItem.setCustomNameVisible(true);
         newItem.setCustomName(item.getItemMeta().getDisplayName());
-    }
-
-    @Nonnull
-    private Location getBlockCenter(@Nonnull Location loc) {
-        return new Location(loc.getWorld(), loc.getBlockX() + 0.5, loc.getBlockY() + 0.5, loc.getBlockZ() + 0.5);
     }
 }

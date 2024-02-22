@@ -10,9 +10,12 @@ import net.guizhanss.slimefuntranslation.api.config.TranslationConfigurationFiel
 import net.guizhanss.slimefuntranslation.utils.FileUtils;
 import net.guizhanss.ultimategenerators2.UltimateGenerators2;
 
+import lombok.Getter;
+
 public final class IntegrationService {
     private final UltimateGenerators2 plugin;
 
+    @Getter
     private boolean slimefunTranslationEnabled = false;
 
     public IntegrationService(UltimateGenerators2 plugin) {
@@ -20,7 +23,6 @@ public final class IntegrationService {
 
         if (isPluginEnabled("SlimefunTranslation")) {
             slimefunTranslationEnabled = true;
-            loadTranslations();
         }
     }
 
@@ -28,7 +30,7 @@ public final class IntegrationService {
         return plugin.getServer().getPluginManager().isPluginEnabled(pluginName);
     }
 
-    private void loadTranslations() {
+    public void loadTranslations() {
         var fields = TranslationConfigurationFields.builder().items("items").build();
         List<String> languages = FileUtils.listYamlFiles(new File(plugin.getDataFolder(), "lang"));
         for (String langFile : languages) {

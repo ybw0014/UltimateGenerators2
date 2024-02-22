@@ -1,4 +1,4 @@
-package net.guizhanss.ultimategenerators2.api.recipes;
+package net.guizhanss.ultimategenerators2.core.recipes;
 
 import org.bukkit.inventory.ItemStack;
 

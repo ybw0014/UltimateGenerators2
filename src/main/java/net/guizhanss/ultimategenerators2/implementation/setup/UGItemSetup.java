@@ -1,7 +1,5 @@
 package net.guizhanss.ultimategenerators2.implementation.setup;
 
-import net.guizhanss.ultimategenerators2.implementation.items.capacitors.HiddenCapacitor;
-
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -12,7 +10,9 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.electric.generato
 
 import net.guizhanss.ultimategenerators2.UltimateGenerators2;
 import net.guizhanss.ultimategenerators2.implementation.UGItems;
+import net.guizhanss.ultimategenerators2.implementation.items.capacitors.HiddenCapacitor;
 import net.guizhanss.ultimategenerators2.implementation.items.capacitors.UGCapacitor;
+import net.guizhanss.ultimategenerators2.implementation.items.generators.modular.ender_crystal.EnderCrystalStabilizer;
 import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.BioFuelGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.DieselGenerator;
 import net.guizhanss.ultimategenerators2.implementation.items.generators.simple.DragonBreathGenerator;
@@ -22,6 +22,7 @@ import net.guizhanss.ultimategenerators2.implementation.items.machines.BioFuelRe
 import net.guizhanss.ultimategenerators2.implementation.items.machines.BiomassExtractionMachine;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.DieselRefinery;
 import net.guizhanss.ultimategenerators2.implementation.items.machines.HeavyWaterRefiningMachine;
+import net.guizhanss.ultimategenerators2.implementation.items.misc.PotionItem;
 
 import lombok.experimental.UtilityClass;
 
@@ -94,6 +95,17 @@ public final class UGItemSetup {
             }
         ).register(plugin);
 
+        new PotionItem(
+            UGItemGroups.MISC,
+            UGItems.ENDER_CRYSTAL_ENHANCER,
+            RecipeType.ANCIENT_ALTAR,
+            new ItemStack[] {
+                new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), UGItems.ENDER_LUMP_4, new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS)
+            }
+        ).register(plugin);
+
         new SlimefunItem(
             UGItemGroups.MISC,
             UGItems.HEAVY_WATER_BUCKET,
@@ -101,7 +113,7 @@ public final class UGItemSetup {
             centerRecipe(new ItemStack(Material.WATER_BUCKET))
         ).register(plugin);
 
-        new SlimefunItem(
+        new PotionItem(
             UGItemGroups.MISC,
             UGItems.NEUTRON_MODERATOR,
             RecipeType.ENHANCED_CRAFTING_TABLE,
@@ -408,6 +420,19 @@ public final class UGItemSetup {
             },
             65536
         ).register(plugin);
+        // </editor-fold>
+
+        // <editor-fold defaultstate="collapsed" desc="Modular Generators">
+        new EnderCrystalStabilizer(
+            UGItemGroups.MODULAR_GENERATORS,
+            UGItems.ENDER_CRYSTAL_GENERATOR_STABILIZER,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+
+            }
+        ).setCapacity(90)
+            .setEnergyConsumption(9)
+            .register(plugin);
         // </editor-fold>
     }
 

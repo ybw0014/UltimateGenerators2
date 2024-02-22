@@ -39,7 +39,7 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 
 import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil;
-import net.guizhanss.ultimategenerators2.api.recipes.MachineFuel;
+import net.guizhanss.ultimategenerators2.core.recipes.MachineFuel;
 import net.guizhanss.ultimategenerators2.implementation.UGItems;
 
 import lombok.Getter;
@@ -47,9 +47,8 @@ import lombok.Getter;
 public abstract class AGenerator extends AHopper implements EnergyNetProvider, MachineProcessHolder<FuelOperation> {
 
     protected final Set<MachineFuel> fuelTypes = new HashSet<>();
-    private final MachineProcessor<FuelOperation> processor = new MachineProcessor<>(this);
+    protected final MachineProcessor<FuelOperation> processor = new MachineProcessor<>(this);
 
-    @Getter
     private int energyCapacity = -1;
     @Getter
     private int energyProduction = -1;
@@ -200,7 +199,7 @@ public abstract class AGenerator extends AHopper implements EnergyNetProvider, M
 
     @Nullable
     @ParametersAreNonnullByDefault
-    private MachineFuel findRecipe(BlockMenu menu, Map<Integer, Integer> found) {
+    protected MachineFuel findRecipe(BlockMenu menu, Map<Integer, Integer> found) {
         for (MachineFuel fuel : fuelTypes) {
             for (int slot : getInputSlots()) {
                 if (fuel.test(menu.getItemInSlot(slot))) {

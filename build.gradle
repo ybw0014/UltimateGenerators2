@@ -31,7 +31,7 @@ dependencies {
     compileOnly 'com.github.Slimefun:Slimefun4:da9c2ac4cc'
     implementation 'net.guizhanss:GuizhanLib-api:1.7.5'
     implementation 'org.bstats:bstats-bukkit:3.0.2'
-    implementation 'net.guizhanss:SlimefunTranslation:59724ec5a1'
+    compileOnly 'net.guizhanss:SlimefunTranslation:59724ec5a1'
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_16
@@ -42,6 +42,7 @@ tasks.withType(JavaCompile) {
 
 
 shadowJar {
+    relocate 'net.guizhanss.guizhanlib', 'net.guizhanss.ultimategenerators2.libs.guizhanlib'
     relocate 'org.bstats', 'net.guizhanss.ultimategenerators2.libs.bstats'
     minimize()
     archiveClassifier = ''
