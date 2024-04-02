@@ -423,16 +423,16 @@ public final class UGItemSetup {
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="Modular Generators">
-        new EnderCrystalStabilizer(
-            UGItemGroups.MODULAR_GENERATORS,
-            UGItems.ENDER_CRYSTAL_GENERATOR_STABILIZER,
-            RecipeType.ENHANCED_CRAFTING_TABLE,
-            new ItemStack[] {
-
-            }
-        ).setCapacity(90)
-            .setEnergyConsumption(9)
-            .register(plugin);
+//        new EnderCrystalStabilizer(
+//            UGItemGroups.MODULAR_GENERATORS,
+//            UGItems.ENDER_CRYSTAL_GENERATOR_STABILIZER,
+//            RecipeType.ENHANCED_CRAFTING_TABLE,
+//            new ItemStack[] {
+//
+//            }
+//        ).setCapacity(90)
+//            .setEnergyConsumption(9)
+//            .register(plugin);
         // </editor-fold>
     }
 
