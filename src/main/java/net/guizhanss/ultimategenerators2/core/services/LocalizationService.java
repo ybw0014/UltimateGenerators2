@@ -8,8 +8,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import net.guizhanss.guizhanlib.slimefun.addon.SlimefunLocalization;
-import net.guizhanss.slimefuntranslation.utils.FileUtils;
 import net.guizhanss.ultimategenerators2.UltimateGenerators2;
+import net.guizhanss.ultimategenerators2.utils.FileUtils;
 
 @SuppressWarnings("ConstantConditions")
 public final class LocalizationService extends SlimefunLocalization {
@@ -31,7 +31,7 @@ public final class LocalizationService extends SlimefunLocalization {
         if (!translationsFolder.exists()) {
             translationsFolder.mkdirs();
         }
-        List<String> translationFiles = FileUtils.listYamlFilesInJar(jarFile, FOLDER_NAME + "/");
+        List<String> translationFiles = FileUtils.listYmlFilesInJar(jarFile, FOLDER_NAME + "/");
         for (String translationFile : translationFiles) {
             String filePath = FOLDER_NAME + File.separator + translationFile;
             File file = new File(plugin.getDataFolder(), filePath);
@@ -47,6 +47,5 @@ public final class LocalizationService extends SlimefunLocalization {
     public String getString(String key, Object... args) {
         return MessageFormat.format(getString(key), args);
     }
-
 
 }
