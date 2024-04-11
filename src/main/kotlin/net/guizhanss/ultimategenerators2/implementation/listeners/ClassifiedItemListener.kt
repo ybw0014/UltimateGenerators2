@@ -15,7 +15,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.inventory.ItemStack
 
-class ClassifiedItemListener(val plugin: UltimateGenerators2) : Listener {
+class ClassifiedItemListener(plugin: UltimateGenerators2) : Listener {
     init {
         plugin.server.pluginManager.registerEvents(this, plugin)
     }

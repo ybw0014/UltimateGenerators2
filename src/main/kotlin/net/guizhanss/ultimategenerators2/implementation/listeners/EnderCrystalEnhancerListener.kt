@@ -13,7 +13,7 @@ import org.bukkit.inventory.EquipmentSlot
 import org.bukkit.inventory.ItemStack
 import org.bukkit.metadata.FixedMetadataValue
 
-class EnderCrystalEnhancerListener(val plugin: UltimateGenerators2) : Listener {
+class EnderCrystalEnhancerListener(plugin: UltimateGenerators2) : Listener {
     init {
         plugin.server.pluginManager.registerEvents(this, plugin)
     }
