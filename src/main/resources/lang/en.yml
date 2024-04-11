@@ -139,7 +139,7 @@ items:
     lore-overrides:
       2: "%sftrlore_Machine_Advanced_Generator%" # Do not translate this at all
       3: "%sftrlore_PowerBuffer_256%" # Do not translate this at all
-      4: "%sftrlore_PowerPerSecond_9%" # Do not translate this at all
+      4: "%sftrlore_PowerPerTick_9%" # Do not translate this at all
   REACTION_GENERATOR:
     name: "&2Reaction Generator"
     lore:
@@ -155,7 +155,7 @@ items:
     lore-overrides:
       7: "%sftrlore_Machine_Advanced_Generator%" # Do not translate this at all
       8: "%sftrlore_PowerBuffer_256%" # Do not translate this at all
-      4: "%sftrlore_PowerPerSecond_8%" # Do not translate this at all
+      9: "%sftrlore_PowerPerTick_8%" # Do not translate this at all
   ENDER_CRYSTAL_GENERATOR:
     name: "&dEnd Crystal Generator"
     lore:

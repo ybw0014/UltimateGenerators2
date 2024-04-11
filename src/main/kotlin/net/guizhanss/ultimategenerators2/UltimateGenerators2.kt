@@ -52,8 +52,7 @@ class UltimateGenerators2 : AbstractAddon(
         private set
     lateinit var integrationService: IntegrationService
         private set
-    var debugEnabled = false
-        private set
+    private var debugEnabled = false
 
     override fun enable() {
         log(Level.INFO, "=====================")
