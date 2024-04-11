@@ -8,14 +8,13 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineFuel 
 
 /**
  * Just a wrapper for Slimefun's [SfMachineFuel].
-
  */
 class MachineFuel(
     val ticks: Int,
     val input: ItemStack,
     val output: ItemStack?
 ) : Predicate<ItemStack?> {
-    val wrapper = ItemStackWrapper.wrap(input)
+    private val wrapper = ItemStackWrapper.wrap(input)
 
     override fun test(item: ItemStack?) = SlimefunUtils.isItemSimilar(item, wrapper, true)
 

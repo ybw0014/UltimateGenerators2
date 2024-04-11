@@ -5,6 +5,7 @@ import net.guizhanss.slimefuntranslation.api.config.TranslationConfigurationDefa
 import net.guizhanss.slimefuntranslation.api.config.TranslationConfigurationFields
 import net.guizhanss.slimefuntranslation.utils.FileUtils
 import net.guizhanss.ultimategenerators2.UltimateGenerators2
+import net.guizhanss.ultimategenerators2.implementation.listeners.TranslationsLoadListener
 import org.bukkit.configuration.file.YamlConfiguration
 import java.io.File
 
@@ -13,14 +14,14 @@ class IntegrationService(private val plugin: UltimateGenerators2) {
         private set
 
     init {
-        if (isPluginEnabled("SlimefunTranslation")) {
-            slimefunTranslationEnabled = true
+        slimefunTranslationEnabled = isPluginEnabled("SlimefunTranslation")
+
+        if (slimefunTranslationEnabled) {
+            TranslationsLoadListener(plugin)
         }
     }
 
-    private fun isPluginEnabled(pluginName: String): Boolean {
-        return plugin.server.pluginManager.isPluginEnabled(pluginName)
-    }
+    private fun isPluginEnabled(pluginName: String) = plugin.server.pluginManager.isPluginEnabled(pluginName)
 
     fun loadTranslations() {
         val fields = TranslationConfigurationFields.builder().items("items").build()

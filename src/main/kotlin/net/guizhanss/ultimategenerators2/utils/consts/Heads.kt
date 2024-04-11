@@ -1,8 +1,5 @@
 package net.guizhanss.ultimategenerators2.utils.consts
 
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils
-import org.bukkit.inventory.ItemStack
-
 enum class Heads(val texture: String) {
     ENDLESS_GENERATOR("7f9f356f5fe7d1bc92cddfaeba3ee773ac9df1cc4d1c2f8fe5f47013032c551d"),
     DIESEL_BUCKET("5afe83692f71f05d113d891f8b838e07d7cb81419b20dc1b209eb84f771f0c9f"),
@@ -19,7 +16,5 @@ enum class Heads(val texture: String) {
     GAMMA_BATTERY("d80e2c33c4c8324452accf9235669e65f00d1926cc5331451925ca26e6aa721"),
     THERMAL_NEUTRON_REACTOR("9343ce58da54c79924a2c9331cfc417fe8ccbbea9be45a7ac85860a6c730"),
     THERMAL_NEUTRON_REACTOR_COOLANT_CELL("8c760c576a088cb29ceb26e3143b7f3c446cd6e5c50bf33151661ce636d0597e"),
-    RAINBOW_ALLOY("41fe27a13c5fc17515cae695852716326b2b5df47d8d6b95a789ae38cac7b1");
-
-    fun getItem(): ItemStack = SlimefunUtils.getCustomHead(texture)
+    RAINBOW_ALLOY("41fe27a13c5fc17515cae695852716326b2b5df47d8d6b95a789ae38cac7b1")
 }

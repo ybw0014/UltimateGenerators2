@@ -15,9 +15,7 @@ class BiomassExtractionMachine(
     item: SlimefunItemStack,
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
-) : AMachine(
-    itemGroup, item, recipeType, recipe
-) {
+) : AMachine(itemGroup, item, recipeType, recipe) {
     override val progressBar = ItemStack(Material.SLIME_BALL)
 
     override fun registerDefaultRecipes() {

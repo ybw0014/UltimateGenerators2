@@ -91,7 +91,7 @@ abstract class AMachine(
     override fun getDisplayRecipes(): List<ItemStack> {
         val list: MutableList<ItemStack> = ArrayList()
         for (recipe in recipes) {
-            val length = max(recipe.input.size.toDouble(), recipe.output.size.toDouble()).toInt()
+            val length = max(recipe.input.size, recipe.output.size)
             val inputs: Array<ItemStack?> = recipe.input.copyOf(length)
             val outputs: Array<ItemStack?> = recipe.output.copyOf(length)
             for (i in 0 until length) {
@@ -103,33 +103,15 @@ abstract class AMachine(
     }
 
     protected fun registerRecipe(ticks: Int, inputs: Array<ItemStack>, outputs: Array<ItemStack>) {
-        recipes.add(
-            MachineRecipe(
-                ticks,
-                inputs,
-                outputs
-            )
-        )
+        recipes.add(MachineRecipe(ticks, inputs, outputs))
     }
 
     protected fun registerRecipe(ticks: Int, inputs: Array<ItemStack>, output: ItemStack) {
-        recipes.add(
-            SingleOutputMachineRecipe(
-                ticks,
-                inputs,
-                output
-            )
-        )
+        recipes.add(SingleOutputMachineRecipe(ticks, inputs, output))
     }
 
     protected fun registerRecipe(ticks: Int, input: ItemStack, output: ItemStack) {
-        recipes.add(
-            SingleMachineRecipe(
-                ticks,
-                input,
-                output
-            )
-        )
+        recipes.add(SingleMachineRecipe(ticks, input, output))
     }
 
     override fun tick(b: Block, menu: BlockMenu) {

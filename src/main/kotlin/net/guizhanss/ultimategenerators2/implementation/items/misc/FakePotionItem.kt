@@ -15,9 +15,7 @@ class FakePotionItem(
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
 ) : SimpleSlimefunItem<ItemConsumptionHandler>(itemGroup, item, recipeType, recipe) {
-    override fun getItemHandler(): ItemConsumptionHandler {
-        return ItemConsumptionHandler { e: PlayerItemConsumeEvent, _: Player, _: ItemStack ->
-            e.isCancelled = true
-        }
+    override fun getItemHandler() = ItemConsumptionHandler { e: PlayerItemConsumeEvent, _: Player, _: ItemStack ->
+        e.isCancelled = true
     }
 }

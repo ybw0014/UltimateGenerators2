@@ -13,9 +13,7 @@ class HeavyWaterRefiningMachine(
     item: SlimefunItemStack,
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
-) : AMachine(
-    itemGroup, item, recipeType, recipe
-) {
+) : AMachine(itemGroup, item, recipeType, recipe) {
     override val progressBar = ItemStack(Material.WATER_BUCKET)
 
     override fun registerDefaultRecipes() {

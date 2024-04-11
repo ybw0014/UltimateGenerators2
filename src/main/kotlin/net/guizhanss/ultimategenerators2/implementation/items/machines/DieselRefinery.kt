@@ -14,9 +14,7 @@ class DieselRefinery(
     item: SlimefunItemStack,
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
-) : AMachine(
-    itemGroup, item, recipeType, recipe
-) {
+) : AMachine(itemGroup, item, recipeType, recipe) {
     override val progressBar = ItemStack(Material.FLINT_AND_STEEL)
 
     override fun registerDefaultRecipes() {
