@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "net.guizhanss"
-version = "0.1.0-alpha"
+version = "UNOFFICIAL"
 description = "UltimateGenerators2"
 
 repositories {
