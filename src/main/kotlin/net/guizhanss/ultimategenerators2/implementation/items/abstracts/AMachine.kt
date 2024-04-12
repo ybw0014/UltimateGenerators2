@@ -20,6 +20,7 @@ import net.guizhanss.ultimategenerators2.core.recipes.MachineRecipe
 import net.guizhanss.ultimategenerators2.core.recipes.SingleMachineRecipe
 import net.guizhanss.ultimategenerators2.core.recipes.SingleOutputMachineRecipe
 import net.guizhanss.ultimategenerators2.utils.BlockUtils
+import org.bukkit.Material
 import org.bukkit.block.Block
 import org.bukkit.event.block.BlockBreakEvent
 import org.bukkit.inventory.ItemStack
@@ -95,8 +96,8 @@ abstract class AMachine(
             val inputs: Array<ItemStack?> = recipe.input.copyOf(length)
             val outputs: Array<ItemStack?> = recipe.output.copyOf(length)
             for (i in 0 until length) {
-                list.add(inputs[i]!!)
-                list.add(outputs[i]!!)
+                list.add(inputs[i] ?: ItemStack(Material.AIR))
+                list.add(outputs[i] ?: ItemStack(Material.AIR))
             }
         }
         return list
