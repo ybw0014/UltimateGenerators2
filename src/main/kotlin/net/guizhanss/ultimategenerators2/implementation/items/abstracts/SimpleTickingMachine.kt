@@ -16,6 +16,9 @@ import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker
 import org.bukkit.block.Block
 import org.bukkit.inventory.ItemStack
 
+/**
+ * A ticking machine that does not have gui.
+ */
 abstract class SimpleTickingMachine(
     itemGroup: ItemGroup,
     item: SlimefunItemStack,

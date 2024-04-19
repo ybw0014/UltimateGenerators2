@@ -14,7 +14,7 @@ import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
 
 /**
- * Just because the menu looks like a hopper.
+ * A basic ticking block that the GUI looks like a hopper.
  */
 abstract class AHopper protected constructor(
     itemGroup: ItemGroup,

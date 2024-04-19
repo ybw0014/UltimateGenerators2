@@ -30,14 +30,15 @@ import org.bukkit.event.block.BlockBreakEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 
+/**
+ * The basic class of a generator.
+ */
 abstract class AGenerator(
     itemGroup: ItemGroup,
     item: SlimefunItemStack,
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
-) : AHopper(itemGroup, item, recipeType, recipe),
-    EnergyNetProvider,
-    MachineProcessHolder<FuelOperation> {
+) : AHopper(itemGroup, item, recipeType, recipe), EnergyNetProvider, MachineProcessHolder<FuelOperation> {
     @JvmField
     protected val fuelTypes: MutableSet<MachineFuel> = HashSet()
 

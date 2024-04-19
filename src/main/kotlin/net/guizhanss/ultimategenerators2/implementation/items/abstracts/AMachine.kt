@@ -26,14 +26,15 @@ import org.bukkit.event.block.BlockBreakEvent
 import org.bukkit.inventory.ItemStack
 import kotlin.math.max
 
+/**
+ * The basic class of a machine.
+ */
 abstract class AMachine(
     itemGroup: ItemGroup,
     item: SlimefunItemStack,
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
-) : AHopper(itemGroup, item, recipeType, recipe),
-    EnergyNetComponent,
-    MachineProcessHolder<CraftingOperation> {
+) : AHopper(itemGroup, item, recipeType, recipe), EnergyNetComponent, MachineProcessHolder<CraftingOperation> {
     @JvmField
     protected val recipes: MutableList<MachineRecipe> = ArrayList()
 
