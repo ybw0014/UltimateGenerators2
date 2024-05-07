@@ -5,7 +5,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemConsumptionHandler
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem
-import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerItemConsumeEvent
 import org.bukkit.inventory.ItemStack
 
@@ -15,7 +14,7 @@ class FakePotionItem(
     recipeType: RecipeType,
     recipe: Array<ItemStack?>
 ) : SimpleSlimefunItem<ItemConsumptionHandler>(itemGroup, item, recipeType, recipe) {
-    override fun getItemHandler() = ItemConsumptionHandler { e: PlayerItemConsumeEvent, _: Player, _: ItemStack ->
+    override fun getItemHandler() = ItemConsumptionHandler { e: PlayerItemConsumeEvent, _, _ ->
         e.isCancelled = true
     }
 }

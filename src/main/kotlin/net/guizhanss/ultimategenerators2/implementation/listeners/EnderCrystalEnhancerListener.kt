@@ -20,7 +20,7 @@ class EnderCrystalEnhancerListener(plugin: UltimateGenerators2) : Listener {
 
     @EventHandler
     fun onUse(e: PlayerInteractEntityEvent) {
-        if (e.rightClicked is EnderCrystal) {
+        if (e.rightClicked !is EnderCrystal) {
             return
         }
 
